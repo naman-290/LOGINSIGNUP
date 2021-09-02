@@ -6,8 +6,15 @@ const user = require('./models/user');
 const { response } = require('express');
 const { findOne, findOneAndUpdate } = require('./models/user');
 
-mongoose.connect('mongodb+srv://banao:banao123@cluster0.hyvso.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+
+const mongoose_URL = process.env.mongoose_url;
+
+//const test = 'mongodb+srv://banao:banao123@cluster0.hyvso.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+mongoose.connect(mongoose_URL
 ,{useNewUrlParser: true,useUnifiedTopology: true})
+
+// mongoose.connect('mongodb+srv://banao:banao123@cluster0.hyvso.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+// ,{useNewUrlParser: true,useUnifiedTopology: true})
 
 
 const db = mongoose.connection
@@ -39,10 +46,11 @@ app.use(bodyParser.json())
 
 app.get('/',(req,res) => {
      res.render('login.ejs');
+     
 });
 
 app.get('/login,',(req,res) => {
-    console.log("wufgwjbwejrbvbebvnvnnwvnwnevnwnvnwklwfo")
+    
     res.render('login.ejs');
 })
 
