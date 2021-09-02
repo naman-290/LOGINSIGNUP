@@ -42,6 +42,7 @@ app.get('/',(req,res) => {
 });
 
 app.get('/login,',(req,res) => {
+    console.log("wufgwjbwejrbvbebvnvnnwvnwnevnwnvnwklwfo")
     res.render('login.ejs');
 })
 
