@@ -9,12 +9,9 @@ const { findOne, findOneAndUpdate } = require('./models/user');
 
 const mongoose_URL = process.env.mongoose_url;
 
-//const test = 'mongodb+srv://banao:banao123@cluster0.hyvso.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 mongoose.connect(mongoose_URL
 ,{useNewUrlParser: true,useUnifiedTopology: true})
 
-// mongoose.connect('mongodb+srv://banao:banao123@cluster0.hyvso.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
-// ,{useNewUrlParser: true,useUnifiedTopology: true})
 
 
 const db = mongoose.connection
