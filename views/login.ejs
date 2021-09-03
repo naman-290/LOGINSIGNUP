@@ -1,7 +1,7 @@
 
 <script >
   function myFunction() {
-      var x = document.getElementById("viewPassword");
+      var x = document.getElementById("login_viewPassword");
       if (x.type === "password") {
         x.type = "text";
       } else {
@@ -9,7 +9,7 @@
       }
     }
   </script>
-  
+
 <center>
 <div class="login" >
     <div class="heading">
@@ -23,9 +23,12 @@
   
           <div class="input-group input-group-lg">
             <span class="input-group-addon"></span>
-            <input type="password" class="form-control" placeholder="Password" name = "password">
+            <input type="password" class="form-control" placeholder="Password" name = "password" id="login_viewPassword">
           </div>
   
+          <div>
+            <input type="checkbox" onclick="myFunction()"> Show password
+          </div>
           <button type="submit" class="float">Login</button>
 
           <div>
